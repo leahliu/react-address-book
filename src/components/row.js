@@ -6,7 +6,8 @@ const TableRow = (props) => {
     <tr>
       <Cell address={props.address}/>
       <td>
-        <button type="checkbox" onClick={() => props.removeAddress(props.address.id)} name={`address-${props.address.id}`}>Delete</button>
+        <button onClick={() => props.removeAddress(props.address.id)} name={`remove-address-${props.address.id}`}>Delete</button>
+        <button onClick={() => props.editAddress(props.address.id)} name={`edit-address-${props.address.id}`}>Edit</button>
       </td>
     </tr>
   )

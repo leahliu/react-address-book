@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import {AddressContext} from '../context/addressProvider';
 import Row from './row';
 import Header from './header';
@@ -42,8 +42,11 @@ const AddressTable = () => {
   const {addresses, dispatch} = useContext(AddressContext);
 
   const removeAddress = index => {
-    //const newAddresses = addresses.filter((address) => address.id !== index);
     dispatch({type: "REMOVE_ADDRESS", id: index});
+  }
+
+  const editAddress = index => {
+    
   }
 
   return (
@@ -51,7 +54,7 @@ const AddressTable = () => {
       <Header columns={columns}/>
       <tbody>
         {addresses.map(address => (
-          <Row address={address} key={address.id} removeAddress={removeAddress}/>
+          <Row address={address} key={address.id} removeAddress={removeAddress} editAddress={editAddress}/>
         ))}        
       </tbody>
     </table>    
