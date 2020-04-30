@@ -1,0 +1,19 @@
+.addAddress {
+  margin-bottom: 20px;
+  table {
+    float: right;
+    width: 90%;
+    td {
+      width: 20%;
+      input {
+        width: 80%;
+      }
+    }
+  }
+}
+.addNewAddrBtn {
+  float: right;
+  overflow: hidden;
+  clear: both;
+  margin-top: 20px 20px 0 0;
+}
